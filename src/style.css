@@ -135,6 +135,7 @@ h5 {
 }
 
 .intro {
+  padding: 1.5rem;
   max-width: 800px;
   margin: 50px auto;
   text-align: center;
@@ -189,6 +190,9 @@ h5 {
 .song-info,
 .player {
   flex: 1;
+}
+.player {
+  max-width: 300px;
 }
 .tag {
   display: flex;
@@ -444,5 +448,31 @@ footer {
   }
   50% {
     transform: scale(1.02);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 4rem;
+  }
+  .song-card {
+    flex-direction: column;
+  }
+  .song-card h3 {
+    font-size: 1.5rem;
+  }
+  .player {
+    order: -1;
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .song-info {
+    order: 1;
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }

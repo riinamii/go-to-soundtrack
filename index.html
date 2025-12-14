@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu_open" />
     <link rel="stylesheet" href="src/style.css" />
     <title>Amar e Sofrer</title>
   </head>
@@ -61,18 +62,8 @@
               stop smiling.
             </p>
           </div>
-          
           <div class="lyric">
-          <blockquote class="quote">
-            Ah, eu acho que é amor de novo
-            <br />
-            Ah, se não for eu tento de novo, de novo
-          </blockquote>
-          <a
-            href="https://genius.com/Napa-and-jovem-dionisio-amor-de-novo-lyrics"
-            target="_blank"
-            >Lyrics -> Genius</a
-          >
+          <button class="lyrics-btn" onclick="openModal('modal1')"><span class="material-symbols-outlined">menu_open</span>Read Lyrics</button>
         </div>
         </div>
       <div class="player">
@@ -99,16 +90,9 @@
           </p>
         </div>
         <div class="lyric">
-          <blockquote class="quote">
-            あんたとこのままおサラバするよか
-            <br />
-            死ぬのがいいわ
-          </blockquote>
-          <a
-            href="https://genius.com/Fujii-kaze-shinunoga-e-wa-lyrics"
-            target="_blank"
-            >Lyrics -> Genius</a
-          >
+          <button class="lyrics-btn" onclick="openModal('modal2')"><span class="material-symbols-outlined">menu_open</span>Read Lyrics</button>
+          
+          
         </div>
         </div>
         <div class="player">
@@ -146,14 +130,8 @@
           </div>
           
           <div class="lyric">
-            <blockquote class="quote">
-              It tore me down to pieces, she'll never know
-              <br />
-              How much I wished I'd never let you go
-            </blockquote>
-            <a href="https://genius.com/Dpr-ian-nerves-lyrics" target="_blank"
-              >Lyrics -> Genius</a
-            >
+            <button class="lyrics-btn" onclick="openModal('modal3')"><span class="material-symbols-outlined">menu_open</span>Read Lyrics</button>
+            
           </div>
           </div>
           <div class="player">
@@ -176,7 +154,7 @@
             <span>Track 04</span>
             <h5>The Acceptance</h5>
           </div>
-          <h3>Amor pelos Dois</h3>
+          <h3>Amar pelos Dois</h3>
           <p class="artist">Salvador Sobral</p>
           <div class="description yellow">
             <h4 class="mood-title">Enduring Sacrifice</h4>
@@ -190,16 +168,8 @@
           </div>
           
           <div class="lyric">
-            <blockquote class="quote">
-              Sem fazer planos do que virá depois
-              <br />
-              O meu coração pode amar pelos dois
-            </blockquote>
-            <a
-              href="https://genius.com/Salvador-sobral-amar-pelos-dois-lyrics"
-              target="_blank"
-              >Lyrics -> Genius</a
-            >
+            <button class="lyrics-btn" onclick="openModal('modal4')"><span class="material-symbols-outlined">menu_open</span>Read Lyrics</button>
+            
           </div>
           </div>
           <div class="player">
@@ -232,5 +202,94 @@
         <a href="https://open.spotify.com/playlist/1qGqoxkzdgq2oknuVZrZLA" target="_blank" class="spotify">Full playlist on Spotify ↗</a>
         <p>Created by <a href="https://github.com/riinamii" target="_blank" class="github">Maryna</a></p>
     </footer>
+
+    <!-- Modal-1 -->
+     <div id="modal1" class="modal" onclick="closeModal('modal1')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeModal('modal1')">❌</button>
+        <h3>Amor de Novo</h3>
+        <blockquote class="quote">
+            Ah, eu acho que é amor de novo
+            <br />
+            Ah, se não for eu tento de novo, de novo
+            <span>
+      <br />
+      Ah, I think this must be love again
+      <br />
+      Ah, if it's not, I'll try again and again
+    </span>
+          </blockquote>
+        <p>Read full lyrics on <a href='https://genius.com/Napa-and-jovem-dionisio-amor-de-novo-lyrics' target="_blank">Genius ↗</a></p>
+        
+      </div>
+     </div>
+
+     <!-- Modal-2 -->
+     <div id="modal2" class="modal" onclick="closeModal('modal2')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeModal('modal2')">❌</button>
+        <h3>Shinunoga E-Wa</h3>
+        <blockquote class="quote">
+            あんたとこのままおサラバするよか
+            <br />
+            死ぬのがいいわ
+            <span>
+      <br />
+      If I had to keep being separated from you like this
+      <br />
+      I'd rather die
+    </span>
+          </blockquote>
+        <p>Read full lyrics on <a
+            href="https://genius.com/Fujii-kaze-shinunoga-e-wa-lyrics"
+            target="_blank"
+            >Genius ↗</a
+          >
+        
+      </div>
+     </div>
+
+     <!-- Modal-3 -->
+     <div id="modal3" class="modal" onclick="closeModal('modal3')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeModal('modal3')">❌</button>
+        <h3>Nerves</h3>
+        <blockquote class="quote">
+              It tore me down to pieces, she'll never know
+              <br />
+              How much I wished I'd never let you go
+            
+          </blockquote>
+        <p>Read full lyrics on <a href="https://genius.com/Dpr-ian-nerves-lyrics" target="_blank"
+              >Genius ↗</a></p>
+        
+      </div>
+     </div>
+
+     <!-- Modal-4 -->
+     <div id="modal4" class="modal" onclick="closeModal('modal4')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeModal('modal4')">❌</button>
+        <h3>Amar pelos Dois</h3>
+        <blockquote class="quote">
+              Sem fazer planos do que virá depois
+              <br />
+              O meu coração pode amar pelos dois
+            <span>
+      <br />
+      Without making plans of what will come after
+      <br />
+      My heart can love for the both of us
+    </span>
+          </blockquote>
+        <p>Read full lyrics on <a
+              href="https://genius.com/Salvador-sobral-amar-pelos-dois-lyrics"
+              target="_blank"
+              >Genius ↗</a></p>
+        
+      </div>
+     </div>
+
+     <script src="src/index.js"></script>
   </body>
 </html>

@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #050505;
@@ -277,6 +279,80 @@ h5 {
   line-height: 1.5;
 }
 
+.final-block {
+  text-align: center;
+  padding: 10rem 1.2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(17, 17, 17, 0) 70%,
+    rgba(17, 17, 17, 0.5) 85%,
+    rgba(17, 17, 17, 1) 100%
+  );
+}
+.final-circle {
+  border: 2px solid #911212;
+  border-radius: 50%;
+  width: clamp(250px, 40vw, 500px);
+  height: clamp(250px, 40vw, 500px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: breathe 8s ease-in-out infinite;
+}
+.final-circle p {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  line-height: 1.5;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+}
+.final-circle span {
+  color: #fa7285;
+}
+.feel {
+  margin-top: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  color: #e2e6ff;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.3s easy;
+}
+.feel:hover {
+  opacity: 1;
+}
+
+footer {
+  background: rgba(17, 17, 17, 1);
+  color: #acacac;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(221, 221, 221, 0.05);
+}
+
+.spotify {
+  color: #acacac;
+  text-decoration: none;
+  transition: all 0.3s easy;
+}
+.spotify:hover {
+  color: #d6d6d6;
+}
+.github {
+  color: #cecece;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.github:hover {
+  color: #eeeeee;
+}
 @keyframes animate {
   0% {
     opacity: 0;
@@ -288,5 +364,14 @@ h5 {
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
   }
 }

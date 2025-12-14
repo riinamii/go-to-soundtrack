@@ -13,7 +13,8 @@ body {
 
 h1,
 h3,
-h4 {
+h4,
+h5 {
   font-family: "Playfair Display", serif;
 }
 .background {
@@ -32,11 +33,10 @@ h4 {
   width: 100%;
   height: 100%;
 
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVRYbE7o52l6pW251I+i9Xw6v/P5/L5/j6s/X7P//q/9/b1D0f576/T9/s/y/l+t+f8t2/+u9f8j0v+x+f93+v/5///j/f/o/v/s//8XJ7tOAAAAq0lEQVRYhe3SywrCIBCA4f2/77/JbZ23z15Cgq9I92R2iYt6W2k/Oa/Lw/x6s/X7P//q/9/b1D0f576/T9/s/y/l+t+f8t2/+u9f8j0v+x+f93+v/5///j/f/o/v/s//8XJ7tO2+jO7x+Qf18qf70Lh8n92D/2P9y1074t0v70f4q9+p/h3j+K1d79F/1Kq/n/fN9291D7l9T/L5/gAAAAAASUVORK5CYII=");
+  background-image: url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
-  background-size: 150px 150px;
-  opacity: 0.15;
-  z-index: 10;
+  opacity: 0.03;
+  z-index: 50;
 }
 
 .sphere {
@@ -50,8 +50,8 @@ h4 {
   height: 40vw;
   background: linear-gradient(
     40deg,
-    rgba(255, 0, 128, 0.8),
-    rgba(255, 102, 0, 0.4)
+    rgba(219, 0, 110, 0.8),
+    rgba(182, 73, 0, 0.4)
   );
   top: -10%;
   left: -10%;
@@ -128,6 +128,153 @@ h4 {
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.divider {
+  height: 1.5px;
+  width: 50%;
+  margin: 30px auto;
+  background: linear-gradient(to right, transparent, #e21c3b, transparent);
+}
+.songs {
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+.song-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.song-card:hover {
+  transition: all 0.5s ease-in-out;
+}
+.song-card.song1:hover {
+  border: 1px solid #fa8d9c;
+}
+.song-card.song2:hover {
+  border: 1px solid #db2121;
+}
+.song-card.song3:hover {
+  border: 1px solid #8d98fa;
+}
+.song-card.song4:hover {
+  border: 1px solid #ffc670;
+}
+.song-info,
+.player {
+  flex: 1;
+}
+.tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+}
+.tag span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+
+  border-radius: 25px;
+}
+.tag h5 {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.tag-pink span {
+  color: #fecaca;
+  background-color: rgba(255, 87, 166, 0.3);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+}
+.tag-pink h5 {
+  color: #ffb2bc;
+}
+.tag-red span {
+  color: #fccac9;
+  background-color: rgba(255, 54, 54, 0.3);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+}
+.tag-red h5 {
+  color: #f77373;
+}
+.tag-blue span {
+  color: #e2e6ff;
+  background-color: rgba(122, 142, 255, 0.3);
+  border: 1px solid rgba(201, 192, 255, 0.2);
+}
+.tag-blue h5 {
+  color: rgb(95, 148, 255);
+}
+.tag-yellow span {
+  color: #feecca;
+  background-color: rgba(253, 219, 145, 0.3);
+  border: 1px solid rgba(255, 187, 0, 0.2);
+}
+.tag-yellow h5 {
+  color: rgb(255, 217, 94);
+}
+.song-card h3 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.artist {
+  font-size: 1.1rem;
+  color: #cecece;
+}
+.description {
+  height: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.description.pink {
+  border-left: 2px solid #fa8d9c;
+}
+.description.red {
+  border-left: 2px solid #db2121;
+}
+.description.blue {
+  border-left: 2px solid #8d98fa;
+}
+.description.yellow {
+  border-left: 2px solid #ffc670;
+}
+
+.mood-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+.song-blurb {
+  line-height: 1.5;
 }
 
 @keyframes animate {
